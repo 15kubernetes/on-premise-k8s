@@ -25,7 +25,3 @@ sudo apt update && sudo apt install vagrant
 sudo apt install libvirt-dev build-essential virt-manager
 vagrant plugin install vagrant-libvirt
 systemctl restart libvirtd
-
-#--vagrant-file--
-mkdir ~/provisioning
-
