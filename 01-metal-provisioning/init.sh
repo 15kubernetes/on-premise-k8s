@@ -7,7 +7,7 @@ kvm-ok
 # --libvirtd-installation 
 # https://ubuntu.com/server/docs/virtualization-libvirt
 sudo apt update
-sudo apt install qemu-kvm libvirt-daemon-system
+sudo apt install qemu-kvm libvirt-daemon-system bridge-utils
 sudo adduser $USER libvirt
 newgrp libvirt
 
