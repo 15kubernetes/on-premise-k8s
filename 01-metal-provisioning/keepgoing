@@ -1,0 +1,5 @@
+virt-install --name vm1 --ram=8192 --disk size=10 --vcpus 1 --os-type linux --os-variant ubuntu20.04 --graphics none --location 'http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/' --extra-args "console=tty0 console=ttyS0,115200n8"
+# When prompted, use the vm name for the host name, and be sure to add openssh when asked for software to pre-install 
+# otherwise take defaults or most reasonable options. Follow install instructions till reboot, then ^]
+virsh domifaddr vm1 # get ip address
+ssh-copy-id rkamradt@192.168.122.95 # use ip address from previous step
